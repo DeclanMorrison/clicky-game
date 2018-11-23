@@ -40,8 +40,8 @@ class Main extends React.Component {
     if (this.state.score > this.state.highScore){
       this.setState({highScore:this.state.score})
     };
-    //reset score
-    this.setState({score:0})
+    //reset score and shuffle cards
+    this.setState({score:0, cards:this.shuffle(this.state.cards)});
 
     //copy current card array
     const newCardsState = this.state.cards;
